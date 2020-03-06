@@ -14,21 +14,32 @@ if dein#load_state('~/.cache/dein')
     call dein#add('roxma/vim-hug-neovim-rpc')
   endif
 
-  call dein#add('preservim/nerdtree')
-  call dein#add('junegunn/fzf', {
-        \ 'build': './install --bin'
-        \})
-  call dein#add('junegunn/fzf.vim')
+  " text editing
   call dein#add('jiangmiao/auto-pairs')
   call dein#add('tpope/vim-commentary')
-  call dein#add('tpope/vim-rails')
   call dein#add('tpope/vim-endwise')
+  call dein#add('tpope/vim-surround')
+  call dein#add('tpope/vim-fugitive')
+
+  " language server
   call dein#add('dense-analysis/ale')
   call dein#add('autozimu/LanguageClient-neovim', {
         \ 'build': 'bash install.sh', 
         \ 'rev': 'next',
         \ })
+
+  " file and project handling
+  call dein#add('preservim/nerdtree')
+  call dein#add('junegunn/fzf', {
+        \ 'build': './install --bin'
+        \})
+  call dein#add('junegunn/fzf.vim')
+  
+  " graphql
   call dein#add('jparise/vim-graphql')
+
+  " rails 
+  call dein#add('tpope/vim-rails')
 
   " colorschemes
   call dein#add('arcticicestudio/nord-vim')
@@ -52,14 +63,7 @@ set cc=100                  " set an 80 column border for good coding style
 filetype plugin indent on   " allows auto-indenting depending on file type
 syntax on                   " syntax highlighting
 
-let g:ale_linters = {
-      \   'ruby': ['rubocop'],
-      \   'python': ['flake8', 'pylint'],
-      \   'javascript': ['eslint'],
-      \}
-
 let g:deoplete#enable_at_startup = 1
-
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
@@ -72,11 +76,20 @@ endfunction"}}}
 
 set hidden
 
+let g:ale_linters = {
+      \   'ruby': ['rubocop'],
+      \   'python': ['flake8', 'pylint'],
+      \   'javascript': ['eslint'],
+      \}
+" language server configuration
 let g:LanguageClient_serverCommands = {
-    \ 'ruby': ['/Users/peterbrandel/.gem/ruby/2.6.5/bin/solargraph', 'stdio'],
+    \ 'ruby': ['/home/pebra/.asdf/shims/solargraph', 'stdio'],
     \ }
 
+" maps leader to space inspired by spacemacs/doom-emacs/spacevim
 let g:mapleader = ' '
+
+" browse your project files super fast and fuzzy
 nnoremap <leader>pf :Files<CR>
 
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
@@ -85,4 +98,5 @@ nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 
+" colors
 colorscheme nord
