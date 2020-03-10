@@ -19,7 +19,10 @@ if dein#load_state('~/.cache/dein')
   call dein#add('tpope/vim-commentary')
   call dein#add('tpope/vim-endwise')
   call dein#add('tpope/vim-surround')
+
+  " git & github
   call dein#add('tpope/vim-fugitive')
+  call dein#add('ruanyl/vim-gh-line')
 
   " language server
   call dein#add('dense-analysis/ale')
@@ -97,6 +100,22 @@ nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+
+" github vim-gh-line config
+let g:gh_line_map = '<leader>ghl'
+let g:gh_line_blame_map = '<leader>ghb'
+let g:gh_open_command = 'open ' " the whitespace here is important
+let g:gh_use_canonical = 1
+" copy github link to clipboard instead of opening the browser
+" let g:gh_open_command = 'fn() { echo "$@" | pbcopy; }; fn '
+
+" NERDTree bindings
+map <leader>ptt :NERDTreeToggle<CR>
+map <leader>ptf :NERDTreeFind<CR>
+
+" spell checking
+map <leader>sss :set spell spelllang=en_ca<CR>
+map <leader>sns :set nospell<CR>
 
 " colors
 colorscheme nord
