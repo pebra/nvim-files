@@ -46,6 +46,7 @@ if dein#load_state('~/.cache/dein')
 
   " colorschemes
   call dein#add('arcticicestudio/nord-vim')
+  call dein#add('NLKNguyen/papercolor-theme')
 
   call dein#end()
   call dein#save_state()
@@ -119,3 +120,15 @@ map <leader>sns :set nospell<CR>
 
 " colors
 colorscheme nord
+
+function ToggleColors()
+    if (g:colors_name == "nord")
+        set background=light
+        colorscheme PaperColor
+    else
+        set background=dark
+        colorscheme nord
+    endif
+endfunction
+
+map <leader>ctt :call ToggleColors()<CR>
