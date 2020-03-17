@@ -44,6 +44,10 @@ if dein#load_state('~/.cache/dein')
   " rails 
   call dein#add('tpope/vim-rails')
 
+  " status bar
+  call dein#add('vim-airline/vim-airline')
+  call dein#add('vim-airline/vim-airline-themes')
+
   " colorschemes
   call dein#add('arcticicestudio/nord-vim')
   call dein#add('NLKNguyen/papercolor-theme')

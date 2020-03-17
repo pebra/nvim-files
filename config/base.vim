@@ -44,3 +44,5 @@ let g:gh_use_canonical = 1
 " copy github link to clipboard instead of opening the browser
 " let g:gh_open_command = 'fn() { echo "$@" | pbcopy; }; fn '
 
+" airline
+let g:airline_theme = 'nord'
