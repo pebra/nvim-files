@@ -3,6 +3,8 @@ let g:mapleader = ' '
 
 " browse your project files super fast and fuzzy
 nnoremap <leader>pf :Files<CR>
+" browse your open buffers super fast and fuzzy
+nnoremap <leader>pb :Buffers<CR>
 
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 " Or map each action separately
@@ -13,6 +15,7 @@ nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 " NERDTree bindings
 map <leader>ptt :NERDTreeToggle<CR>
 map <leader>ptf :NERDTreeFind<CR>
+map <leader>ptr :NERDTreeRefreshRoot<CR>
 
 " spell checking
 map <leader>sss :set spell spelllang=en_ca<CR>
@@ -28,4 +31,6 @@ function ToggleColors()
     endif
 endfunction
 
+" toggle between dark and light theme
 map <leader>ctt :call ToggleColors()<CR>
+
