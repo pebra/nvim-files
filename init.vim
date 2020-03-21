@@ -1,6 +1,5 @@
-if &compatible
-  set nocompatible
-endif
+set nocompatible
+
 " Add the dein installation directory into runtimepath
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
