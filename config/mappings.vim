@@ -34,3 +34,8 @@ endfunction
 " toggle between dark and light theme
 map <leader>ctt :call ToggleColors()<CR>
 
+
+" ale mappings
+noremap <Leader>cgd :ALEGoToDefinition<CR>
+nnoremap <leader>ccf :ALEFix<cr>
+noremap <Leader>cfu :ALEFindReferences<CR>

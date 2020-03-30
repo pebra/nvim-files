@@ -25,10 +25,6 @@ if dein#load_state('~/.cache/dein')
 
   " language server
   call dein#add('dense-analysis/ale')
-  call dein#add('autozimu/LanguageClient-neovim', {
-        \ 'build': 'bash install.sh', 
-        \ 'rev': 'next',
-        \ })
 
   " file and project handling
   call dein#add('preservim/nerdtree')
@@ -43,6 +39,9 @@ if dein#load_state('~/.cache/dein')
   " rails 
   call dein#add('tpope/vim-rails')
 
+  " elixir
+  call dein#add('elixir-editors/vim-elixir')
+
   " status bar
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
@@ -50,6 +49,7 @@ if dein#load_state('~/.cache/dein')
   " colorschemes
   call dein#add('arcticicestudio/nord-vim')
   call dein#add('NLKNguyen/papercolor-theme')
+  call dein#add('morhetz/gruvbox')
 
   call dein#end()
   call dein#save_state()
