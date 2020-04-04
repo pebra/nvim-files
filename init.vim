@@ -50,12 +50,11 @@ if dein#load_state('~/.cache/dein')
   call dein#add('arcticicestudio/nord-vim')
   call dein#add('NLKNguyen/papercolor-theme')
   call dein#add('morhetz/gruvbox')
+  call dein#add('lifepillar/vim-solarized8')
 
   call dein#end()
   call dein#save_state()
 endif
-
-colorscheme nord
 
 " partials 
 source ~/.config/nvim/config/base.vim

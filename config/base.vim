@@ -1,6 +1,6 @@
 set nocompatible            " disable compatibility to old-time vi
 set showmatch               " show matching brackets.
-set ignorecase              " case insensitive matching
+set ignorecase              " case insensitive matching 
 set hlsearch                " highlight search results
 set tabstop=2               " number of columns occupied by a tab character
 set softtabstop=2           " see multiple spaces as tabstops so <BS> does the right thing
@@ -13,6 +13,11 @@ set cc=100                  " set an 80 column border for good coding style
 set hidden
 filetype plugin indent on   " allows auto-indenting depending on file type
 syntax on                   " syntax highlighting
+
+" true color hack
+set termguicolors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
@@ -59,4 +64,8 @@ let g:gh_use_canonical = 1
 " let g:gh_open_command = 'fn() { echo "$@" | pbcopy; }; fn '
 
 " airline
+
+set background=dark
+colorscheme nord
 let g:airline_theme = 'nord'
+
