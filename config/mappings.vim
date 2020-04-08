@@ -22,15 +22,11 @@ map <leader>sss :set spell spelllang=en_ca<CR>
 map <leader>sns :set nospell<CR>
 
 function ToggleColors()
-    if (g:colors_name == "papercolor")
+    if (&background == 'dark')
         set background=light
         hi Comment ctermbg=0
-        colorscheme solarized8
-        let g:airline_theme = 'solarized'
     else
         set background=dark
-        colorscheme nord
-        let g:airline_theme = 'nord'
     endif
 endfunction
 
