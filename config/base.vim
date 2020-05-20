@@ -65,7 +65,7 @@ let g:gh_use_canonical = 1
 
 " airline
 
-set background=dark
+set background=light
 colorscheme gruvbox
 let g:airline_theme = 'gruvbox'
 

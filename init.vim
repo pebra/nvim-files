@@ -29,7 +29,8 @@ if dein#load_state('~/.cache/dein')
   " file and project handling
   call dein#add('preservim/nerdtree')
   call dein#add('junegunn/fzf', {
-        \ 'build': './install --bin'
+        \ 'build': './install --bin',
+        \ 'dir': '~/.cache/dein/repos/github.com/junegunn/fzf'
         \})
   call dein#add('junegunn/fzf.vim')
   
