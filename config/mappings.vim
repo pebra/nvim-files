@@ -38,3 +38,14 @@ map <leader>ctt :call ToggleColors()<CR>
 noremap <Leader>cgd :ALEGoToDefinition<CR>
 nnoremap <leader>ccf :ALEFix<cr>
 noremap <Leader>cfu :ALEFindReferences<CR>
+
+" vimpyter bindings
+autocmd Filetype ipynb nmap <silent><Leader>pb :VimpyterInsertPythonBlock<CR>
+autocmd Filetype ipynb nmap <silent><Leader>pj :VimpyterStartJupyter<CR>
+autocmd Filetype ipynb nmap <silent><Leader>pn :VimpyterStartNteract<CR>
+
+" vroom test runner bindings
+map <leader>ttf :VroomRunTestFile<CR>
+map <leader>ttn :VroomRunNearestTest<CR>
+map <leader>ttl :VroomRunLastTest<CR>
+
