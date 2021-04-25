@@ -19,6 +19,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('tpope/vim-endwise')
   call dein#add('tpope/vim-surround')
   call dein#add('tpope/vim-sleuth')
+  call dein#add('junegunn/vim-easy-align')
 
   " git & github
   call dein#add('tpope/vim-fugitive')
@@ -34,6 +35,7 @@ if dein#load_state('~/.cache/dein')
         \ 'dir': '~/.cache/dein/repos/github.com/junegunn/fzf'
         \})
   call dein#add('junegunn/fzf.vim')
+  call dein#add('Shopify/shadowenv.vim')
   
   " graphql
   call dein#add('jparise/vim-graphql')
@@ -52,7 +54,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('rust-lang/rust.vim')
 
   " ds
-  call dein#add('szymonmaszke/vimpyter')
+  " call dein#add('szymonmaszke/vimpyter')
 
   " status bar
   call dein#add('vim-airline/vim-airline')
@@ -63,6 +65,8 @@ if dein#load_state('~/.cache/dein')
   call dein#add('NLKNguyen/papercolor-theme')
   call dein#add('morhetz/gruvbox')
   call dein#add('lifepillar/vim-solarized8')
+  call dein#add('rakr/vim-one')
+  call dein#add('jacoborus/tender.vim')
 
   call dein#end()
   call dein#save_state()

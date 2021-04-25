@@ -24,9 +24,11 @@ map <leader>sns :set nospell<CR>
 function ToggleColors()
     if (&background == 'dark')
         set background=light
+        colorscheme one
         hi Comment ctermbg=0
     else
         set background=dark
+        colorscheme tender
     endif
 endfunction
 
@@ -49,3 +51,8 @@ map <leader>ttf :VroomRunTestFile<CR>
 map <leader>ttn :VroomRunNearestTest<CR>
 map <leader>ttl :VroomRunLastTest<CR>
 
+" format json
+map <leader>ffj :%!python -m json.tool<CR>
+
+" align markdown tables
+au FileType markdown vmap <Leader>== :EasyAlign*<Bar><Enter>
