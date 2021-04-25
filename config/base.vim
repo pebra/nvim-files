@@ -66,12 +66,14 @@ let g:gh_use_canonical = 1
 " copy github link to clipboard instead of opening the browser
 " let g:gh_open_command = 'fn() { echo "$@" | pbcopy; }; fn '
 
-" airline
-
 set background=dark
-colorscheme nord
-let g:airline_theme = 'nord'
 
+" Example config in VimScript
+let g:tokyonight_style = "storm"
+let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
+
+colorscheme tokyonight
+"
 " vimpyter
 let g:vimpyter_jupyter_notebook_flags = '--browser=firefox --ip=0.0.0.0'
 
@@ -94,3 +96,6 @@ if (empty($TMUX))
     set termguicolors
   endif
 endif
+
+source ~/.config/nvim/config/nvim-tree.vim
+source ~/.config/nvim/config/lualine.vim

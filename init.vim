@@ -29,13 +29,19 @@ if dein#load_state('~/.cache/dein')
   call dein#add('dense-analysis/ale')
 
   " file and project handling
-  call dein#add('preservim/nerdtree')
+  call dein#add('ryanoasis/vim-devicons')
+  call dein#add('kyazdani42/nvim-web-devicons')
+  call dein#add('kyazdani42/nvim-tree.lua')
+  call dein#add('hoob3rt/lualine.nvim')
+
   call dein#add('junegunn/fzf', {
         \ 'build': './install --bin',
         \ 'dir': '~/.cache/dein/repos/github.com/junegunn/fzf'
         \})
   call dein#add('junegunn/fzf.vim')
-  call dein#add('Shopify/shadowenv.vim')
+
+  " uncomment if you work with shadowenv
+  " call dein#add('Shopify/shadowenv.vim')
   
   " graphql
   call dein#add('jparise/vim-graphql')
@@ -53,12 +59,8 @@ if dein#load_state('~/.cache/dein')
   " rust
   call dein#add('rust-lang/rust.vim')
 
-  " ds
+  " uncomment for jupyter notebook support
   " call dein#add('szymonmaszke/vimpyter')
-
-  " status bar
-  call dein#add('vim-airline/vim-airline')
-  call dein#add('vim-airline/vim-airline-themes')
 
   " colorschemes
   call dein#add('arcticicestudio/nord-vim')
@@ -67,6 +69,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('lifepillar/vim-solarized8')
   call dein#add('rakr/vim-one')
   call dein#add('jacoborus/tender.vim')
+  call dein#add('folke/tokyonight.nvim')
 
   call dein#end()
   call dein#save_state()
