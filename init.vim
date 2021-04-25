@@ -33,16 +33,12 @@ if dein#load_state('~/.cache/dein')
   call dein#add('kyazdani42/nvim-web-devicons')
   call dein#add('kyazdani42/nvim-tree.lua')
   call dein#add('hoob3rt/lualine.nvim')
-
   call dein#add('junegunn/fzf', {
         \ 'build': './install --bin',
         \ 'dir': '~/.cache/dein/repos/github.com/junegunn/fzf'
         \})
   call dein#add('junegunn/fzf.vim')
 
-  " uncomment if you work with shadowenv
-  " call dein#add('Shopify/shadowenv.vim')
-  
   " graphql
   call dein#add('jparise/vim-graphql')
 
@@ -61,6 +57,10 @@ if dein#load_state('~/.cache/dein')
 
   " uncomment for jupyter notebook support
   " call dein#add('szymonmaszke/vimpyter')
+  "
+  " uncomment if you work with shadowenv
+  " call dein#add('Shopify/shadowenv.vim')
+  
 
   " colorschemes
   call dein#add('arcticicestudio/nord-vim')
@@ -77,4 +77,5 @@ endif
 
 " partials 
 source ~/.config/nvim/config/base.vim
+source ~/.config/nvim/config/plugins.vim
 source ~/.config/nvim/config/mappings.vim

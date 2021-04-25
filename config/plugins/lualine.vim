@@ -1,6 +1,6 @@
 let g:lualine = {
     \'options' : {
-    \  'theme' : 'palenight',
+    \  'theme' : 'tokyonight',
     \  'section_separators' : ['', ''],
     \  'component_separators' : ['', ''],
     \  'icons_enabled' : v:true,
@@ -23,4 +23,5 @@ let g:lualine = {
     \},
     \'extensions' : [ 'fzf' ],
     \}
+echo lualine
 lua require("lualine").setup()
