@@ -25,7 +25,5 @@ map <leader>ffj :%!python -m json.tool<CR>
 " align markdown tables
 au FileType markdown vmap <Leader>== :EasyAlign*<Bar><Enter>
 
-source ~/.config/nvim/config/keybindings/vroom.vim
 source ~/.config/nvim/config/keybindings/jupyter.vim
-source ~/.config/nvim/config/keybindings/language-server.vim
 source ~/.config/nvim/config/keybindings/files.vim

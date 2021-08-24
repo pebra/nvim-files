@@ -21,12 +21,12 @@ if dein#load_state('~/.cache/dein')
   call dein#add('tpope/vim-sleuth')
   call dein#add('junegunn/vim-easy-align')
 
+  " language server
+  call dein#add('neovim/nvim-lspconfig')
+
   " git & github
   call dein#add('tpope/vim-fugitive')
   call dein#add('ruanyl/vim-gh-line')
-
-  " language server
-  call dein#add('dense-analysis/ale')
 
   " file and project handling
   call dein#add('ryanoasis/vim-devicons')
@@ -44,7 +44,6 @@ if dein#load_state('~/.cache/dein')
 
   " rails & ruby
   call dein#add('tpope/vim-rails')
-  call dein#add('skalnik/vim-vroom')
 
   " erlang
   call dein#add('vim-erlang/vim-erlang-runtime')
@@ -54,13 +53,6 @@ if dein#load_state('~/.cache/dein')
 
   " rust
   call dein#add('rust-lang/rust.vim')
-
-  " uncomment for jupyter notebook support
-  " call dein#add('szymonmaszke/vimpyter')
-  "
-  " uncomment if you work with shadowenv
-  " call dein#add('Shopify/shadowenv.vim')
-  
 
   " colorschemes
   call dein#add('arcticicestudio/nord-vim')
