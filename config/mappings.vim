@@ -19,6 +19,9 @@ endfunction
 " toggle between dark and light theme
 map <leader>ctt :call ToggleColors()<CR>
 
+" search for word under cursor with Rg
+nnoremap <leader>sw :Rg <c-r>=expand("<cword>")<cr><cr>
+
 " format json
 map <leader>ffj :%!python -m json.tool<CR>
 
