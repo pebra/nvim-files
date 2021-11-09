@@ -33,13 +33,19 @@ function! s:check_back_space() abort "{{{
   return !col || getline('.')[col - 1]  =~ '\s'
 endfunction"}}}
 
+" enable visual clues for tabs and spaces
+set list
+set lcs=tab:▸\ ,nbsp:·,trail:·
+highlight SpecialKey guifg=#fff000
+
 set background=dark
+
 
 " Example config in VimScript
 let g:tokyonight_style = "night"
 let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
 
-colorscheme tokyonight
+colorscheme one
 
 " true colors
 if (empty($TMUX))

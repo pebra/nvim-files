@@ -32,7 +32,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('ryanoasis/vim-devicons')
   call dein#add('kyazdani42/nvim-web-devicons')
   call dein#add('kyazdani42/nvim-tree.lua')
-  call dein#add('hoob3rt/lualine.nvim')
+  call dein#add('nvim-lualine/lualine.nvim')
   call dein#add('junegunn/fzf', {
         \ 'build': './install --bin',
         \ 'dir': '~/.cache/dein/repos/github.com/junegunn/fzf'

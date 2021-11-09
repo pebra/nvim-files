@@ -31,7 +31,11 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<space>lq', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
   buf_set_keymap('n', '<space>lf', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 
+  -- vim.api.nvim_exec([[
+  --   autocmd BufWritePre *.ex lua vim.lsp.buf.formatting_sync(nil, 100)
+  -- ]])
 end
+
 
 local path_to_elixirls = vim.fn.expand("~/src/elixir-ls/release/language_server")
 nvim_lsp.elixirls.setup{
