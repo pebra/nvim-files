@@ -49,7 +49,7 @@ nvim_lsp.elixirls.setup{
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'solargraph', 'sorbet' }
+local servers = { 'solargraph', 'sorbet', 'rust_analyzer' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,

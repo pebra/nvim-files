@@ -20,8 +20,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('tpope/vim-surround')
   call dein#add('tpope/vim-sleuth')
   call dein#add('junegunn/vim-easy-align')
-
-  " language server
+" language server
   call dein#add('neovim/nvim-lspconfig')
 
   " git & github
@@ -55,19 +54,8 @@ if dein#load_state('~/.cache/dein')
   call dein#add('rust-lang/rust.vim')
 
   " colorschemes
-  call dein#add('arcticicestudio/nord-vim')
-  call dein#add('NLKNguyen/papercolor-theme')
-  call dein#add('morhetz/gruvbox')
-  call dein#add('lifepillar/vim-solarized8')
-  call dein#add('rakr/vim-one')
-  call dein#add('jacoborus/tender.vim')
-  call dein#add('folke/tokyonight.nvim')
+  call dein#add('EdenEast/nightfox.nvim')
 
   call dein#end()
   call dein#save_state()
 endif
-
-" partials 
-source ~/.config/nvim/config/base.vim
-source ~/.config/nvim/config/plugins.vim
-source ~/.config/nvim/config/mappings.vim

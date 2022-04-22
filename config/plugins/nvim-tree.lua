@@ -4,7 +4,6 @@ vim.o.termguicolors = true
 
 g.nvim_tree_add_trailing = 0 -- append a trailing slash to folder names
 g.nvim_tree_git_hl = git_status
-g.nvim_tree_gitignore = 0
 g.nvim_tree_highlight_opened_files = 0
 g.nvim_tree_indent_markers = 1
 g.nvim_tree_quit_on_open = 0 -- closes tree when file's opened
@@ -63,6 +62,7 @@ require('nvim-tree').setup({
    open_on_tab = false,
    hijack_cursor = true,
    update_cwd = true,
+   gitignore = 0,
    update_focused_file = {
       enable = true,
       update_cwd = false,
@@ -70,6 +70,6 @@ require('nvim-tree').setup({
    view = {
       allow_resize = true,
       side = "left",
-      width = 25,
+      width = 30,
    },
 })
