@@ -19,17 +19,6 @@ syntax on                   " syntax highlighting
 
 let g:python3_host_prog="~/.asdf/shims/python"
 
-" deoplete
-let g:deoplete#enable_at_startup = 1
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ deoplete#mappings#manual_complete()
-function! s:check_back_space() abort "{{{
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfunction"}}}
-
 " enable visual clues for tabs and spaces
 set list
 set lcs=tab:▸\ ,nbsp:·,trail:·
@@ -46,5 +35,15 @@ if (empty($TMUX))
     set termguicolors
   endif
 endif
+
+" Use <Tab> and <S-Tab> to navigate through popup menu
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" Set completeopt to have a better completion experience
+set completeopt=menuone,noinsert,noselect
+
+" Avoid showing message extra message when using completion
+set shortmess+=c
 
 colorscheme nightfox
