@@ -55,6 +55,8 @@ if dein#load_state('~/.cache/dein')
 
   " colorschemes
   call dein#add('EdenEast/nightfox.nvim')
+  call dein#add('olimorris/onedarkpro.nvim')
+  call dein#add('aktersnurra/no-clown-fiesta.nvim')
 
   call dein#end()
   call dein#save_state()
