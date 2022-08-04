@@ -37,7 +37,7 @@ local on_attach = function(client, bufnr)
 end
 
 
-local path_to_elixirls = vim.fn.expand("~/src/elixir-ls/release/language_server")
+local path_to_elixirls = vim.fn.expand("~/bin/exls/language_server.sh")
 nvim_lsp.elixirls.setup{
   cmd = { path_to_elixirls },
   on_attach = on_attach,
