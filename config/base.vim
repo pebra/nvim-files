@@ -57,4 +57,6 @@ set completeopt=menuone,noinsert,noselect
 " Avoid showing message extra message when using completion
 set shortmess+=c
 
-colorscheme no-clown-fiesta
+set completeopt=menu,menuone,noselect
+
+colorscheme terafox

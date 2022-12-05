@@ -53,6 +53,19 @@ if dein#load_state('~/.cache/dein')
   " rust
   call dein#add('rust-lang/rust.vim')
 
+  " mind
+  call dein#add('nvim-lua/plenary.nvim')
+  call dein#add('phaazon/mind.nvim')
+
+  " autocompletion
+  call dein#add('hrsh7th/cmp-nvim-lsp')
+  call dein#add('hrsh7th/cmp-buffer')
+  call dein#add('hrsh7th/cmp-path')
+  call dein#add('hrsh7th/cmp-cmdline')
+  call dein#add('hrsh7th/nvim-cmp')
+  call dein#add('L3MON4D3/LuaSnip')
+  call dein#add('saadparwaiz1/cmp_luasnip')
+  
   " colorschemes
   call dein#add('EdenEast/nightfox.nvim')
   call dein#add('olimorris/onedarkpro.nvim')
